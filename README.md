@@ -1,1 +1,1 @@
-# large-dynamic-slider
+# Large Dynamic Slider With Vinella Vanilla JS

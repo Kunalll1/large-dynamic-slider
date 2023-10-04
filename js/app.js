@@ -27,6 +27,8 @@ async function fetchData() {
 
       // Set the class attribute for the created div
       createDiv.setAttribute("class", "slide");
+      
+      // Set the text content of the div to the title from the data
       createDiv.innerText += dataGet.title;
 
       // Set the background image of the div to the image URL from the data
