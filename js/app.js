@@ -44,6 +44,9 @@ async function fetchData() {
       slide.style.left = `${index * 100}%`;
     });
 
+    // Initially, hide the "prev" button
+    prevButton.style.display = "none";
+
     // Add click event listeners to the "next" and "prev" buttons
     nextButton.addEventListener("click", goNext);
     prevButton.addEventListener("click", goPrev);
@@ -58,6 +61,10 @@ function goNext() {
   if (counter < slides.length - 1) {
     counter++;
     slideImage();
+    prevButton.style.display = "block"; // Show the "prev" button
+  }
+  if (counter === slides.length - 1) {
+    nextButton.style.display = "none"; // Hide the "next" button
   }
 }
 
@@ -66,6 +73,10 @@ function goPrev() {
   if (counter !== 0) {
     counter--;
     slideImage();
+    nextButton.style.display = "block"; // Show the "next" button
+  }
+  if (counter === 0) {
+    prevButton.style.display = "none"; // Hide the "prev" button
   }
 }
 
